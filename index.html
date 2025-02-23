@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life After Crypto - Timeline</title>
+    <title>Crypto Life - Inspired by AllFood</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,88 +12,92 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('A_visually_engaging_timeline_illustration_of_crypt.png') no-repeat center center/cover;
-            color: #e6edf3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: #f5f7fa;
+            color: #333;
         }
-        .book {
-            display: flex;
-            perspective: 1500px;
-        }
-        .page {
-            width: 600px;
-            height: 400px;
-            margin: 10px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transform-origin: left;
-            transform: rotateY(0deg);
-            transition: transform 0.6s ease;
-        }
-        .page h2 {
-            border-bottom: 2px solid #ff8c00;
-            padding-bottom: 10px;
-        }
-        .page p {
-            line-height: 1.6;
-        }
-        .navigation {
-            position: fixed;
-            bottom: 20px;
-            display: flex;
-            gap: 20px;
-        }
-        .btn {
-            padding: 10px 20px;
+        header {
             background: #ff8c00;
+            padding: 20px;
+            text-align: center;
             color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
         }
-        .btn:hover {
-            background: #ff0080;
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #ff8c00;
+            font-weight: 600;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('A_visually_engaging_timeline_illustration_of_crypt.png') no-repeat center center/cover;
+            color: #fff;
+        }
+        .section {
+            padding: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .footer {
+            background: #161b22;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="book">
-        <div class="page" id="page1">
-            <h2>2009: The Birth of Bitcoin</h2>
-            <p>Satoshi Nakamoto created Bitcoin, revolutionizing digital money.</p>
+    <header>
+        <h1>Life After Crypto</h1>
+        <p>Exploring the new digital era</p>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#community">Community</a>
+    </nav>
+    
+    <section class="hero">
+        <h2>Welcome to the Future</h2>
+        <p>Discover how crypto is reshaping our world.</p>
+    </section>
+    
+    <section class="section" id="about">
+        <div class="card">
+            <h2>About Crypto</h2>
+            <p>Crypto has revolutionized finance, bringing decentralization, security, and innovation.</p>
         </div>
-        <div class="page" id="page2" style="display: none;">
-            <h2>2015: Ethereum and Smart Contracts</h2>
-            <p>Vitalik Buterin launched Ethereum, bringing programmability to blockchain.</p>
+    </section>
+    
+    <section class="section" id="timeline">
+        <div class="card">
+            <h2>Crypto Timeline</h2>
+            <p>From Bitcoin's inception to DeFi and NFTs, explore the milestones of crypto history.</p>
         </div>
-        <div class="page" id="page3" style="display: none;">
-            <h2>2020-2021: DeFi and NFTs</h2>
-            <p>Decentralized finance and non-fungible tokens exploded in popularity.</p>
+    </section>
+    
+    <section class="section" id="community">
+        <div class="card">
+            <h2>Join the Community</h2>
+            <p>Connect with enthusiasts on Twitter, Telegram, and Discord.</p>
         </div>
-    </div>
-
-    <div class="navigation">
-        <button class="btn" onclick="showPage(-1)">Previous</button>
-        <button class="btn" onclick="showPage(1)">Next</button>
-    </div>
-
-    <script>
-        let currentPage = 1;
-        const pages = document.querySelectorAll('.page');
-
-        function showPage(step) {
-            pages[currentPage - 1].style.display = 'none';
-            currentPage += step;
-            if (currentPage < 1) currentPage = pages.length;
-            if (currentPage > pages.length) currentPage = 1;
-            pages[currentPage - 1].style.display = 'block';
-        }
-    </script>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Life After Crypto. All rights reserved.</p>
+    </footer>
 </body>
 </html>
